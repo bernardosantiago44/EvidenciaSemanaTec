@@ -1,5 +1,4 @@
-"""
-By Abhisek Jana
+"""By Abhisek Jana
 code taken from https://github.com/adeveloperdiary/blog/tree/master/Computer_Vision/Sobel_Edge_Detection
 blog http://www.adeveloperdiary.com/data-science/computer-vision/how-to-implement-sobel-edge-detection-using-python-from-scratch/
 """
@@ -57,11 +56,11 @@ if __name__ == '__main__':
     
     # Argumento requerido de la imagen
     ap.add_argument("-i", "--image", required=True, help="Path to the image")
-    ap.add_argument("-b", "--blur", required=False, help="Gaussian blur", default = 9)
+    ap.add_argument("-b", "--blur",type=int, help="Gaussian blur", default = 9)
     args = vars(ap.parse_args())
  
     # Cargar la imagen con el nombre dado 
     image = cv2.imread(args["image"])
     
  
-    gaussian_blur(image, int(args["blur"]), verbose=True)
+    gaussian_blur(image, args["blur"], verbose=True)
