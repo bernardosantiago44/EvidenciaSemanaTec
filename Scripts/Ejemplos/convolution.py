@@ -4,11 +4,12 @@ code taken from https://github.com/adeveloperdiary/blog/tree/master/Computer_Vis
 blog http://www.adeveloperdiary.com/data-science/computer-vision/how-to-implement-sobel-edge-detection-using-python-from-scratch/
 """
 
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
+import numpy as np        # Manipular matrices
+import cv2                # Cargar imagenes
+import matplotlib.pyplot as plt # Mostrar imgnes
  
  
+# Funcion de convolucion 
 def convolution(image, kernel, average=False, verbose=False):
     if len(image.shape) == 3:
         print("Found 3 Channels : {}".format(image.shape))
