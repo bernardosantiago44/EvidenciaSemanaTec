@@ -44,10 +44,10 @@ def gaussian_kernel(size, sigma=1, verbose=False):
  
     # Mostrar el kernel en una grafica con matplotlib
     if verbose:
-        plt.figure('Figure 1')
+        plt.figure('Figure 0')
         plt.imshow(kernel_2D, interpolation='none', cmap='gray')
         plt.title("Kernel ( {}X{} )".format(size, size))
-        plt.show()
+        plt.show(block=False)
  
     return kernel_2D
  

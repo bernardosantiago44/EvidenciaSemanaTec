@@ -1,2 +1,2 @@
 -i RemoteControl.jpg 
--b 3
+-b 25
