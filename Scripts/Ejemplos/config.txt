@@ -1,2 +1,2 @@
--i RemoteControl.jpg 
--b 25
+-i ImagenNeblina.jpg 
+-b 16

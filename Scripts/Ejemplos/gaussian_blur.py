@@ -75,6 +75,9 @@ if __name__ == '__main__':
  
     # Cargar la imagen con el nombre dado 
     image = cv2.imread(args["image"])
-    
+  
+    # Dejar solamente numeros impares
+    if args['blur'] % 2 == 0:
+        args['blur'] += 1  
  
     gaussian_blur(image, args["blur"], verbose=True)
