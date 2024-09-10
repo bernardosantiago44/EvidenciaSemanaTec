@@ -57,9 +57,11 @@ if __name__ == '__main__':
     
     # Argumento requerido de la imagen
     ap.add_argument("-i", "--image", required=True, help="Path to the image")
+    ap.add_argument("-b", "--blur", required=False, help="Gaussian blur", default = 9)
     args = vars(ap.parse_args())
  
     # Cargar la imagen con el nombre dado 
     image = cv2.imread(args["image"])
+    
  
-    gaussian_blur(image, 9, verbose=True)
+    gaussian_blur(image, int(args["blur"]), verbose=True)
